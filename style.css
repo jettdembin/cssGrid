@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans&display=swap");
+
+body {
+  background: rgb(19, 19, 19);
+  color: #fff;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #353535;
+  font-size: 3rem;
+  color: #fff;
+  box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem,
+    rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+  height: 100%;
+  width: 100%;
+  border-radius: 0.25rem;
+  transition: all 500ms;
+  overflow: hidden;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card:hover {
+  box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em,
+    rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+  transform: translateY(-3px) scale(1.05);
+}
+
+.animated-grid {
+  height: 85vh;
+  margin-bottom: 200px;
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:
+    "a  b  c  d"
+    "l  💫 💫 e"
+    "k  💫 💫 f"
+    "j  i  h  g";
+  grid-template-rows: repeat(4, 25%);
+  grid-template-columns: 240px auto auto 240px;
+}
+
+.card {
+  background-color: rgb(36, 243, 147);
+  animation: cardEntrance 700ms ease-out;
+  animation-fill-mode: backwards;
+}
+
+.card:nth-child(1) {
+  grid-area: a;
+}
+
+.card:nth-child(2) {
+  grid-area: b;
+}
+
+.card:nth-child(3) {
+  grid-area: c;
+}
+
+.card:nth-child(4) {
+  grid-area: d;
+}
+
+.card:nth-child(5) {
+  grid-area: e;
+}
+
+.card:nth-child(6) {
+  grid-area: f;
+}
+
+.card:nth-child(7) {
+  grid-area: g;
+}
+
+.card:nth-child(8) {
+  grid-area: h;
+}
+
+.card:nth-child(9) {
+  grid-area: i;
+}
+
+.card:nth-child(10) {
+  grid-area: j;
+}
+
+.card:nth-child(11) {
+  grid-area: k;
+}
+
+.card:nth-child(12) {
+  grid-area: l;
+}
+
+.card:last-child {
+  grid-area: 💫;
+}
+
+.pickmynose {
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:
+    "a  b  c  d"
+    "l  💫 💫 e"
+    "k  💫 💫 f"
+    "j  i  h  g";
+  grid-template-rows: repeat(4, 25%);
+  grid-template-columns: 240px auto auto 240px;
+  --stagger-delay: 100ms;
+}
+
+.yoder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #353535;
+  font-size: 3rem;
+  color: #fff;
+  box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem,
+    rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+  height: 100%;
+  width: 100%;
+  border-radius: 0.25rem;
+  transition: all 650ms;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgb(245, 102, 81);
+  animation: cardEntrance 700ms ease-out;
+  animation-fill-mode: backwards;
+}
+
+@keyframes cardEntrance {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+    filter: hue-rotate(180deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    filter: hue-rotate(0deg);
+  }
+}
+
+.yoder:hover {
+  box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em,
+    rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+  transform: translateY(-3px) scale(1.05);
+}
+
+.yoder:nth-child(1) {
+  grid-area: a;
+  animation-delay: calc(1 * var(--stagger-delay));
+}
+.yoder:nth-child(2) {
+  grid-area: b;
+  animation-delay: calc(2 * var(--stagger-delay));
+}
+.yoder:nth-child(3) {
+  grid-area: c;
+  animation-delay: calc(3 * var(--stagger-delay));
+}
+.yoder:nth-child(4) {
+  grid-area: d;
+  animation-delay: calc(4 * var(--stagger-delay));
+}
+.yoder:nth-child(5) {
+  grid-area: e;
+  animation-delay: calc(5 * var(--stagger-delay));
+}
+.yoder:nth-child(6) {
+  grid-area: f;
+  animation-delay: calc(6 * var(--stagger-delay));
+}
+.yoder:nth-child(7) {
+  grid-area: g;
+  animation-delay: calc(7 * var(--stagger-delay));
+}
+.yoder:nth-child(8) {
+  grid-area: h;
+  animation-delay: calc(8 * var(--stagger-delay));
+}
+.yoder:nth-child(9) {
+  grid-area: i;
+  animation-delay: calc(9 * var(--stagger-delay));
+}
+.yoder:nth-child(10) {
+  grid-area: j;
+  animation-delay: calc(10 * var(--stagger-delay));
+}
+.yoder:nth-child(11) {
+  grid-area: k;
+  animation-delay: calc(11 * var(--stagger-delay));
+}
+.yoder:nth-child(12) {
+  grid-area: l;
+  animation-delay: calc(12 * var(--stagger-delay));
+}
+.yoder:last-child {
+  grid-area: 💫;
+  animation-delay: calc(13 * var(--stagger-delay));
+}
+
+.retry {
+  display: grid;
+  grid-template-rows: repeat (4, 25%);
+  grid-template-columns: 240px auto auto 240px;
+  gap: 1rem;
+  grid-template-areas:
+    "1 2 3 4"
+    "12 💥 💥 5"
+    "11 💥 💥 6"
+    "10 9 8 7";
+  width: 100vw;
+  height: 85vh;
+  margin-top: 5rem;
+  --stagger-delay: 100ms;
+}
+
+.osu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #353535;
+  font-size: 3rem;
+  color: #fff;
+  box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem,
+    rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+  height: 100%;
+  width: 100%;
+  border-radius: 0.25rem;
+  transition: all 650ms;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgb(245, 102, 81);
+  animation: cardAnimz 700ms ease-out;
+  animation-fill-mode: backwards;
+}
+
+@keyframes cardAnimz {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+    filter: hue-rotate(180deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    filter: hue-rotate(0deg);
+  }
+}
+
+.osu:hover {
+  transform: translateY(-3px) scale(1.05);
+}
+
+.osu:nth-child(1) {
+  grid-area: 1;
+}
+.osu:nth-child(2) {
+  grid-area: "2";
+}
+.osu:nth-child(3) {
+  grid-area: "3";
+}
+.osu:nth-child(4) {
+  grid-area: "4";
+}
+.osu:nth-child(5) {
+  grid-area: "5";
+}
+.osu:nth-child(6) {
+  grid-area: "6";
+}
+.osu:nth-child(7) {
+  grid-area: "7";
+}
+.osu:nth-child(8) {
+  grid-area: "8";
+}
+.osu:nth-child(9) {
+  grid-area: "9";
+}
+.osu:nth-child(10) {
+  grid-area: "10";
+}
+.osu:nth-child(11) {
+  grid-area: "11";
+}
+.osu:nth-child(12) {
+  grid-area: "12";
+}
+.osu:last-child {
+  grid-area: 💥;
+}
