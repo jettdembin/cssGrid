@@ -307,3 +307,104 @@ body {
 .osu:last-child {
   grid-area: 💥;
 }
+
+.yessirski {
+  height: 85vh;
+  width: 100%;
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: repeat (4, 25%);
+  grid-template-columns: 240px auto auto 240px;
+  grid-template-areas:
+    "1  2  3  4"
+    "c  💯 💯 5"
+    "b  💯 💯 6"
+    "a  9  8  7";
+  --stagger-delay: 100ms;
+}
+
+.YEET {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rebeccapurple;
+  border-radius: 0.25rem;
+  transition: all 400ms;
+  font-size: 3rem;
+  animation: cardYessirski 700ms ease-out;
+  animation-fill-mode: backwards;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@keyframes cardYessirski {
+  from {
+    opacity: 0;
+    filter: hue-rotate(180deg);
+    transform: scale(0.3);
+  }
+  to {
+    opacity: 1;
+    filter: hue-rotate(0deg);
+    transform: scale(1);
+  }
+}
+
+.YEET:hover {
+  transform: translateY(-0.3px) scale(1.03);
+}
+
+.YEET:nth-child(1) {
+  grid-area: "1";
+  animation-delay: calc(1 * var(--stagger-delay));
+}
+.YEET:nth-child(2) {
+  grid-area: "2";
+  animation-delay: calc(2 * var(--stagger-delay));
+}
+.YEET:nth-child(3) {
+  grid-area: "3";
+  animation-delay: calc(3 * var(--stagger-delay));
+}
+.YEET:nth-child(4) {
+  grid-area: "4";
+  animation-delay: calc(4 * var(--stagger-delay));
+}
+.YEET:nth-child(5) {
+  grid-area: "5";
+  animation-delay: calc(5 * var(--stagger-delay));
+}
+.YEET:nth-child(6) {
+  grid-area: "6";
+  animation-delay: calc(6 * var(--stagger-delay));
+}
+.YEET:nth-child(7) {
+  grid-area: "7";
+  animation-delay: calc(7 * var(--stagger-delay));
+}
+.YEET:nth-child(8) {
+  grid-area: "8";
+  animation-delay: calc(8 * var(--stagger-delay));
+}
+.YEET:nth-child(9) {
+  grid-area: "9";
+  animation-delay: calc(9 * var(--stagger-delay));
+}
+.YEET:nth-child(10) {
+  grid-area: a;
+  animation-delay: calc(10 * var(--stagger-delay));
+}
+.YEET:nth-child(11) {
+  grid-area: b;
+  animation-delay: calc(11 * var(--stagger-delay));
+}
+.YEET:nth-child(12) {
+  grid-area: c;
+  animation-delay: calc(12 * var(--stagger-delay));
+}
+.YEET:last-child {
+  grid-area: 💯;
+  animation-delay: calc(13 * var(--stagger-delay));
+}
