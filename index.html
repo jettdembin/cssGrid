@@ -1,74 +1,515 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <title>Grid Practice</title>
-  </head>
-  <body>
-    <header class="yessirski">
-      <div class="YEET">1</div>
-      <div class="YEET">2</div>
-      <div class="YEET">3</div>
-      <div class="YEET">4</div>
-      <div class="YEET">5</div>
-      <div class="YEET">6</div>
-      <div class="YEET">7</div>
-      <div class="YEET">8</div>
-      <div class="YEET">9</div>
-      <div class="YEET">a</div>
-      <div class="YEET">b</div>
-      <div class="YEET">c</div>
-      <div class="YEET">Yessirski</div>
-    </header>
-    <h1>Animated Grid</h1>
-    <section class="animated-grid">
-      <div class="card">a</div>
-      <div class="card">b</div>
-      <div class="card">c</div>
-      <div class="card">d</div>
-      <div class="card">e</div>
-      <div class="card">f</div>
-      <div class="card">g</div>
-      <div class="card">h</div>
-      <div class="card">i</div>
-      <div class="card">j</div>
-      <div class="card">k</div>
-      <div class="card">l</div>
-      <div class="card">main</div>
-    </section>
-    <main class="YahtZEE">
-      <div class="yoder">a</div>
-      <div class="yoder">b</div>
-      <div class="yoder">c</div>
-      <div class="yoder">d</div>
-      <div class="yoder">e</div>
-      <div class="yoder">f</div>
-      <div class="yoder">g</div>
-      <div class="yoder">h</div>
-      <div class="yoder">i</div>
-      <div class="yoder">j</div>
-      <div class="yoder">k</div>
-      <div class="yoder">l</div>
-      <div class="yoder">YODER</div>
-    </main>
-    <footer class="retry">
-      <div class="osu">1</div>
-      <div class="osu">2</div>
-      <div class="osu">3</div>
-      <div class="osu">4</div>
-      <div class="osu">5</div>
-      <div class="osu">6</div>
-      <div class="osu">7</div>
-      <div class="osu">8</div>
-      <div class="osu">9</div>
-      <div class="osu">10</div>
-      <div class="osu">11</div>
-      <div class="osu">12</div>
-      <div class="osu">OSUUUU</div>
-    </footer>
-  </body>
-</html>
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans&display=swap");
+
+body {
+  background: rgb(19, 19, 19);
+  color: #fff;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #353535;
+  font-size: 3rem;
+  color: #fff;
+  box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem,
+    rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+  height: 100%;
+  width: 100%;
+  border-radius: 0.25rem;
+  transition: all 500ms;
+  overflow: hidden;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card:hover {
+  box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em,
+    rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+  transform: translateY(-3px) scale(1.05);
+}
+
+.animated-grid {
+  height: 85vh;
+  margin-bottom: 200px;
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:
+    "a  b  c  d"
+    "l  💫 💫 e"
+    "k  💫 💫 f"
+    "j  i  h  g";
+  grid-template-rows: repeat(4, 25%);
+  grid-template-columns: 240px auto auto 240px;
+}
+
+.card {
+  background-color: rgb(36, 243, 147);
+  animation: cardEntrance 700ms ease-out;
+  animation-fill-mode: backwards;
+}
+
+.card:nth-child(1) {
+  grid-area: a;
+}
+
+.card:nth-child(2) {
+  grid-area: b;
+}
+
+.card:nth-child(3) {
+  grid-area: c;
+}
+
+.card:nth-child(4) {
+  grid-area: d;
+}
+
+.card:nth-child(5) {
+  grid-area: e;
+}
+
+.card:nth-child(6) {
+  grid-area: f;
+}
+
+.card:nth-child(7) {
+  grid-area: g;
+}
+
+.card:nth-child(8) {
+  grid-area: h;
+}
+
+.card:nth-child(9) {
+  grid-area: i;
+}
+
+.card:nth-child(10) {
+  grid-area: j;
+}
+
+.card:nth-child(11) {
+  grid-area: k;
+}
+
+.card:nth-child(12) {
+  grid-area: l;
+}
+
+.card:last-child {
+  grid-area: 💫;
+}
+
+.pickmynose {
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:
+    "a  b  c  d"
+    "l  💫 💫 e"
+    "k  💫 💫 f"
+    "j  i  h  g";
+  grid-template-rows: repeat(4, 25%);
+  grid-template-columns: 240px auto auto 240px;
+  --stagger-delay: 100ms;
+}
+
+.yoder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #353535;
+  font-size: 3rem;
+  color: #fff;
+  box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem,
+    rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+  height: 100%;
+  width: 100%;
+  border-radius: 0.25rem;
+  transition: all 650ms;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgb(245, 102, 81);
+  animation: cardEntrance 700ms ease-out;
+  animation-fill-mode: backwards;
+}
+
+@keyframes cardEntrance {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+    filter: hue-rotate(180deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    filter: hue-rotate(0deg);
+  }
+}
+
+.yoder:hover {
+  box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em,
+    rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+  transform: translateY(-3px) scale(1.05);
+}
+
+.yoder:nth-child(1) {
+  grid-area: a;
+  animation-delay: calc(1 * var(--stagger-delay));
+}
+.yoder:nth-child(2) {
+  grid-area: b;
+  animation-delay: calc(2 * var(--stagger-delay));
+}
+.yoder:nth-child(3) {
+  grid-area: c;
+  animation-delay: calc(3 * var(--stagger-delay));
+}
+.yoder:nth-child(4) {
+  grid-area: d;
+  animation-delay: calc(4 * var(--stagger-delay));
+}
+.yoder:nth-child(5) {
+  grid-area: e;
+  animation-delay: calc(5 * var(--stagger-delay));
+}
+.yoder:nth-child(6) {
+  grid-area: f;
+  animation-delay: calc(6 * var(--stagger-delay));
+}
+.yoder:nth-child(7) {
+  grid-area: g;
+  animation-delay: calc(7 * var(--stagger-delay));
+}
+.yoder:nth-child(8) {
+  grid-area: h;
+  animation-delay: calc(8 * var(--stagger-delay));
+}
+.yoder:nth-child(9) {
+  grid-area: i;
+  animation-delay: calc(9 * var(--stagger-delay));
+}
+.yoder:nth-child(10) {
+  grid-area: j;
+  animation-delay: calc(10 * var(--stagger-delay));
+}
+.yoder:nth-child(11) {
+  grid-area: k;
+  animation-delay: calc(11 * var(--stagger-delay));
+}
+.yoder:nth-child(12) {
+  grid-area: l;
+  animation-delay: calc(12 * var(--stagger-delay));
+}
+.yoder:last-child {
+  grid-area: 💫;
+  animation-delay: calc(13 * var(--stagger-delay));
+}
+
+.retry {
+  display: grid;
+  grid-template-rows: repeat (4, 25%);
+  grid-template-columns: 240px auto auto 240px;
+  gap: 1rem;
+  grid-template-areas:
+    "1 2 3 4"
+    "12 💥 💥 5"
+    "11 💥 💥 6"
+    "10 9 8 7";
+  width: 100vw;
+  height: 85vh;
+  margin-top: 5rem;
+  --stagger-delay: 100ms;
+}
+
+.osu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #353535;
+  font-size: 3rem;
+  color: #fff;
+  box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem,
+    rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+  height: 100%;
+  width: 100%;
+  border-radius: 0.25rem;
+  transition: all 650ms;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgb(245, 102, 81);
+  animation: cardAnimz 700ms ease-out;
+  animation-fill-mode: backwards;
+}
+
+@keyframes cardAnimz {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+    filter: hue-rotate(180deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    filter: hue-rotate(0deg);
+  }
+}
+
+.osu:hover {
+  transform: translateY(-3px) scale(1.05);
+}
+
+.osu:nth-child(1) {
+  grid-area: 1;
+}
+.osu:nth-child(2) {
+  grid-area: "2";
+}
+.osu:nth-child(3) {
+  grid-area: "3";
+}
+.osu:nth-child(4) {
+  grid-area: "4";
+}
+.osu:nth-child(5) {
+  grid-area: "5";
+}
+.osu:nth-child(6) {
+  grid-area: "6";
+}
+.osu:nth-child(7) {
+  grid-area: "7";
+}
+.osu:nth-child(8) {
+  grid-area: "8";
+}
+.osu:nth-child(9) {
+  grid-area: "9";
+}
+.osu:nth-child(10) {
+  grid-area: "10";
+}
+.osu:nth-child(11) {
+  grid-area: "11";
+}
+.osu:nth-child(12) {
+  grid-area: "12";
+}
+.osu:last-child {
+  grid-area: 💥;
+}
+
+.yessirski {
+  height: 85vh;
+  width: 100%;
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: repeat (4, 25%);
+  grid-template-columns: 240px auto auto 240px;
+  grid-template-areas:
+    "1  2  3  4"
+    "c  💯 💯 5"
+    "b  💯 💯 6"
+    "a  9  8  7";
+  --stagger-delay: 100ms;
+}
+
+.YEET {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rebeccapurple;
+  border-radius: 0.25rem;
+  transition: all 400ms;
+  font-size: 3rem;
+  animation: cardYessirski 700ms ease-out;
+  animation-fill-mode: backwards;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@keyframes cardYessirski {
+  from {
+    opacity: 0;
+    filter: hue-rotate(180deg);
+    transform: scale(0.3);
+  }
+  to {
+    opacity: 1;
+    filter: hue-rotate(0deg);
+    transform: scale(1);
+  }
+}
+
+.YEET:hover {
+  transform: translateY(-0.3px) scale(1.03);
+}
+
+.YEET:nth-child(1) {
+  grid-area: "1";
+  animation-delay: calc(1 * var(--stagger-delay));
+}
+.YEET:nth-child(2) {
+  grid-area: "2";
+  animation-delay: calc(2 * var(--stagger-delay));
+}
+.YEET:nth-child(3) {
+  grid-area: "3";
+  animation-delay: calc(3 * var(--stagger-delay));
+}
+.YEET:nth-child(4) {
+  grid-area: "4";
+  animation-delay: calc(4 * var(--stagger-delay));
+}
+.YEET:nth-child(5) {
+  grid-area: "5";
+  animation-delay: calc(5 * var(--stagger-delay));
+}
+.YEET:nth-child(6) {
+  grid-area: "6";
+  animation-delay: calc(6 * var(--stagger-delay));
+}
+.YEET:nth-child(7) {
+  grid-area: "7";
+  animation-delay: calc(7 * var(--stagger-delay));
+}
+.YEET:nth-child(8) {
+  grid-area: "8";
+  animation-delay: calc(8 * var(--stagger-delay));
+}
+.YEET:nth-child(9) {
+  grid-area: "9";
+  animation-delay: calc(9 * var(--stagger-delay));
+}
+.YEET:nth-child(10) {
+  grid-area: a;
+  animation-delay: calc(10 * var(--stagger-delay));
+}
+.YEET:nth-child(11) {
+  grid-area: b;
+  animation-delay: calc(11 * var(--stagger-delay));
+}
+.YEET:nth-child(12) {
+  grid-area: c;
+  animation-delay: calc(12 * var(--stagger-delay));
+}
+.YEET:last-child {
+  grid-area: 💯;
+  animation-delay: calc(13 * var(--stagger-delay));
+}
+
+.sectionfinal {
+  height: 85vh;
+  width: 100%;
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: repeat (4, 25%);
+  grid-template-columns: auto auto auto 300px;
+  grid-template-areas:
+    "a c f 🔥"
+    "b e i 🔥"
+    "d h k 🔥"
+    "g j l 🔥";
+  margin-bottom: 15vh;
+}
+
+.final {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(245, 102, 81);
+  border-radius: 2rem;
+  transition: all 300ms ease;
+  overflow: hidden;
+  --stager-delay: 100ms;
+  animation: cardFinal 700ms ease-out;
+  animation-fill-mode: backwards;
+}
+
+.final:hover {
+  transform: translateY(-0.5px) scale(1.08);
+  box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em,
+    rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+}
+
+@keyframes cardFinal {
+  from {
+    opacity: 0;
+    filter: hue-rotate(180deg);
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    filter: hue-rotate(0deg);
+    transform: scale(1);
+  }
+}
+
+.final:nth-child(1) {
+  grid-area: a;
+  animation-delay: calc(1 * (var(--stager-delay)));
+}
+.final:nth-child(2) {
+  grid-area: b;
+  animation-delay: calc(2 * (var(--stager-delay)));
+}
+.final:nth-child(3) {
+  grid-area: c;
+  animation-delay: calc(3 * (var(--stager-delay)));
+}
+.final:nth-child(4) {
+  grid-area: d;
+  animation-delay: calc(4 * (var(--stager-delay)));
+}
+.final:nth-child(5) {
+  grid-area: e;
+  animation-delay: calc(5 * (var(--stager-delay)));
+}
+.final:nth-child(6) {
+  grid-area: f;
+  animation-delay: calc(6 * (var(--stager-delay)));
+}
+.final:nth-child(7) {
+  grid-area: g;
+  animation-delay: calc(7 * (var(--stager-delay)));
+}
+.final:nth-child(8) {
+  grid-area: h;
+  animation-delay: calc(8 * (var(--stager-delay)));
+}
+.final:nth-child(9) {
+  grid-area: i;
+  animation-delay: calc(9 * (var(--stager-delay)));
+}
+.final:nth-child(10) {
+  grid-area: j;
+  animation-delay: calc(10 * (var(--stager-delay)));
+}
+.final:nth-child(11) {
+  grid-area: k;
+  animation-delay: calc(11 * (var(--stager-delay)));
+}
+.final:nth-child(12) {
+  grid-area: l;
+  animation-delay: calc(12 * (var(--stager-delay)));
+}
+.final:last-child {
+  grid-area: 🔥;
+  animation-delay: calc(13 * (var(--stager-delay)));
+}
+
 
